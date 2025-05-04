@@ -1,0 +1,28 @@
+
+services: 
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: livrosdb
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpass
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  web:
+    build: .
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+    - ./app:/app
+    ports:
+    - "8000:8000"
+    depends_on:
+    - db
+    env_file:
+    - .env
+
+volumes:
+  db_data: 
