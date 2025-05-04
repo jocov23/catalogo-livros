@@ -1,5 +1,5 @@
-
-services: 
+services:
+#create the container db which is based in the image of mysql:8,  run an instance of MySql and store app data
   db:
     image: mysql:8
     environment:
@@ -11,7 +11,8 @@ services:
       - db_data:/var/lib/mysql
     ports:
       - "3306:3306"
-
+#create the web container which store/run the django app and all the configs for the app
+#configured to run after bd
   web:
     build:
       context: .
