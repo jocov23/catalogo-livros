@@ -1,0 +1,5 @@
+commands to type when initiating the project
+
+docker-compose up -d --build == initiate and start all the containers contained in the .yaml file
+docker-compose exec web bash == enter the CLI of the "web" container
+python manage.py runserver 0.0.0.0:8000 == start the django application contained in the "web" container
