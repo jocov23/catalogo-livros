@@ -12,7 +12,7 @@ services:
     ports:
       - "3306:3306"
 #create the web container which store/run the django app and all the configs for the app
-#configured to run after bd
+#configured to run after bd aaaaa
   web:
     build:
       context: .
