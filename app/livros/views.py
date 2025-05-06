@@ -1,35 +1,59 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
+from .forms import LivroForm
 from .models import Livro
 from .serializers import LivroSerializer
 
+#function to register books and redirect to the listing page
+def cadastrar_livro(request): #HTML
+    if request.method == 'POST':
+       form =LivroForm(request.POST)
+       if form.is_valid():
+           form.save()
+           return redirect('listar_livros')
+    else:
+       form =LivroForm()
+    return render(request, 'livros/cadastrar.html', {'form': form})
+
+#function to list book data
+def listar_livros(request): #HTML
+    livros = Livro.objects.all().order_by('-criado_em')
+    return render(request, 'livros/listar.html', {'livros':livros})
+
 #function to create or request data from a book
-@api_view(['GET', 'POST'])
+@api_view(['GET', 'POST']) #API
 def livros_list(request):
+    
+    #show books by date of criation
+    livros = Livro.objects.all().order_by('-criado_em')
+
     #If method created is "get" (to return some data), serializer convert the list of books in JSON and return to the user
     if request.method == 'GET':
         livros = Livro.objects.all()
         serializer = LivroSerializer(livros, many = True)
         return Response(serializer.data)
+    
     #If method is "POST" (to create some data), serializer verify if the format is valid and or create succesfully(send to the database) 
     # or return error 400
     elif request.method == 'POST':
         serializer = LivroSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
     
-    # Function to modify or request data of a already existing book
-@api_view(['GET', 'PUT', 'DELETE'])
+
+# Function to modify or request data of a already existing book
+@api_view(['GET', 'PUT', 'DELETE']) #API
 def livro_detail(request, pk):
-    # Verify if the book requested is contained in the database (pk= primarykey)j
+
+    # Verify if the book requested is contained in the database (pk= primarykey)
     try:
         livro = Livro.objects.get(pk=pk)
     except Livro.DoesNotExist:
-            return Response({'erro': 'Livro nao encontrado'}, status=status.HTTP_404_NOT_FOUND)
+            return Response({'erro': 'Livro nao encontrado'}, status=404)
     
     #request data from a especific book by method GET
     if request.method == 'GET':
@@ -42,10 +66,10 @@ def livro_detail(request, pk):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=400)
 
     #if method is DELETE, it just...delete    
     elif request.method == 'DELETE':
         livro.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)       
+        return Response(status=204)       
     
