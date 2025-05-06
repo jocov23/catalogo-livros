@@ -1,13 +1,29 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
+from .forms import LivroForm
 from .models import Livro
 from .serializers import LivroSerializer
 
+#function to register books and redirect to the listing page
+def cadastrar_livro(request): #HTML
+    if request.method == 'POST':
+       form =LivroForm(request.POST)
+       if form.is_valid():
+           form.save()
+           return redirect('listar_livros')
+    else:
+       form =LivroForm()
+    return render(request, 'livros/cadastrar.html', {'form': form})
+
+#function to list book data
+def listar_livros(request): #HTML
+    livros = Livro.objects.all().order_by('-criado_em')
+    return render(request, 'livros/listar.html', {'livros':livros})
 
 #function to create or request data from a book
-@api_view(['GET', 'POST'])
+@api_view(['GET', 'POST']) #API
 def livros_list(request):
     
     #show books by date of criation
@@ -30,7 +46,7 @@ def livros_list(request):
     
 
 # Function to modify or request data of a already existing book
-@api_view(['GET', 'PUT', 'DELETE'])
+@api_view(['GET', 'PUT', 'DELETE']) #API
 def livro_detail(request, pk):
 
     # Verify if the book requested is contained in the database (pk= primarykey)

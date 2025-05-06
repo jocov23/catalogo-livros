@@ -1,0 +1,18 @@
+<!--interface to show a list of books and a option below to redirect to register page of new books-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista de Livros</title>
+    </head>
+    <body>
+        <h1>Livros Cadastrados</h1>
+        <ul>
+            {% for livro in livros%}
+            <li><strong>{{ livro.titulo }}</strong> = {{ livro.autor }} ({{livro.ano_publicacao }})</li>
+            {% empty %} <!--if there is no book registered-->
+                <li> Nenhum livro cadastrado ainda. </li>
+            {% endfor %}
+        </ul>
+        <a href = "{% url 'cadastrar_livro' %}">Cadastrar novo livro</a> <!--button to redirect to the page of register-->
+    </body>
+</html>
