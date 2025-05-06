@@ -25,7 +25,7 @@ def livros_list(request):
     # Function to modify or request data of a already existing book
 @api_view(['GET', 'PUT', 'DELETE'])
 def livro_detail(request, pk):
-    # Verify if the book requested is contained in the database (pk= primarykey)
+    # Verify if the book requested is contained in the database (pk= primarykey)j
     try:
         livro = Livro.objects.get(pk=pk)
     except Livro.DoesNotExist:
