@@ -1,5 +1,5 @@
 #config of the container web, based in the image of python, it copy the requirements file and upgrade pip 
-FROM python:3.11-alpine
+FROM python:3.11
 
 #avoid python write cache archives (avoid "garbage")
 ENV PYTHONDONTWRITEBYTECODE=1
