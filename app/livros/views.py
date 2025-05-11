@@ -6,8 +6,34 @@ from .forms import LivroForm
 from .models import Livro
 from .serializers import LivroSerializer
 
+def cadastrar_livro(request):
+
+    mensagem = ''
+
+    if request.method == 'POST':
+        titulo = request.POST.get('titulo')
+        autor = request.POST.get ('autor')
+        ano_publicacao = request.POST.get ('ano_publicacao')
+        editora = request.POST.get ('editora')
+
+        if Livro.objects.filter(titulo=titulo, autor=autor).exists(): #verify if the book already exists
+            mensagem = 'Este livro já foi adicionado!'
+        else:
+            Livro.objects.create(
+                titulo=titulo,
+                autor=autor,
+                ano_publicacao=ano_publicacao,
+                editora=editora
+            )
+            return redirect('listar_livros')
+        
+    return render(request, 'livros/cadastrar.html', {'mensagem': mensagem})
+
+
+
+
 #function to register books and redirect to the listing page
-def cadastrar_livro(request): #HTML
+"""def cadastrar_livro(request): #HTML
     if request.method == 'POST':
        form =LivroForm(request.POST)
        if form.is_valid():
@@ -16,11 +42,13 @@ def cadastrar_livro(request): #HTML
     else:
        form =LivroForm()
     return render(request, 'livros/cadastrar.html', {'form': form})
-
+"""
 #function to list book data
 def listar_livros(request): #HTML
     livros = Livro.objects.all().order_by('-criado_em')
     return render(request, 'livros/listar.html', {'livros':livros})
+
+#-----------------------------------------
 
 #function to create or request data from a book
 @api_view(['GET', 'POST']) #API
