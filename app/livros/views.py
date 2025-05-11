@@ -29,20 +29,6 @@ def cadastrar_livro(request):
         
     return render(request, 'livros/cadastrar.html', {'mensagem': mensagem})
 
-
-
-
-#function to register books and redirect to the listing page
-"""def cadastrar_livro(request): #HTML
-    if request.method == 'POST':
-       form =LivroForm(request.POST)
-       if form.is_valid():
-           form.save()
-           return redirect('listar_livros')
-    else:
-       form =LivroForm()
-    return render(request, 'livros/cadastrar.html', {'form': form})
-"""
 #function to list book data
 def listar_livros(request): #HTML
     livros = Livro.objects.all().order_by('-criado_em')
