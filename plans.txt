@@ -1,0 +1,8 @@
+1.login interface
+2.exclusive database to login data
+3.style pages
+4.details per book
+5.README
+6.use guide
+7.opinion page per book
+8.option to see books readed, saved and added
