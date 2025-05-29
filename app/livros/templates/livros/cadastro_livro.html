@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Cadastrar Livro</title>
+    <title>Cadastro de Livro</title>
 </head>
 <body>
     {% if mensagem %}
@@ -22,7 +22,7 @@
         <label for="autor">Autor:</label>
         <input type="text" id="autor" name="autor" required><br><br>
 
-        <label for="ano-publicacao">Ano de Publicação:</label>
+        <label for="ano-publicacao">Ano:</label>
         <input type="number" id="ano_publicacao" name="ano_publicacao" required><br><br>
 
         <label for="editora">Editora:</label>
@@ -31,6 +31,6 @@
         <button type="submit">Enviar</button>
     </form>
     
-    <a href="{% url 'listar_livros' %} ">Ver Lista de Livros</a>
+    <a href="{% url 'lista_livros' %} ">Ver Lista de Livros</a>
 </body>
 </html>

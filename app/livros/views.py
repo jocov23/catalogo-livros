@@ -5,8 +5,12 @@ from rest_framework import status
 from .forms import LivroForm
 from .models import Livro
 from .serializers import LivroSerializer
+#from django.contrib.auth.models import User
+#from django.contrib import messages
 
-def cadastrar_livro(request):
+
+
+def cadastro_livro(request): #HTML #submit book
 
     mensagem = ''
 
@@ -25,12 +29,12 @@ def cadastrar_livro(request):
                 ano_publicacao=ano_publicacao,
                 editora=editora
             )
-            return redirect('listar_livros')
+            return redirect('lista_livros')
         
-    return render(request, 'livros/cadastrar.html', {'mensagem': mensagem})
+    return render(request, 'livros/cadastro_livro.html', {'mensagem': mensagem})
 
 #function to list book data
-def listar_livros(request): #HTML
+def lista_livros(request): #HTML
     livros = Livro.objects.all().order_by('-criado_em')
     return render(request, 'livros/listar.html', {'livros':livros})
 

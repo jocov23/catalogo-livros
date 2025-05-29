@@ -1,5 +1,8 @@
-1.login interface
-2.exclusive database to login data
+1.login interface (in development)
+2.creation of a solo created login interface(without django help), which include:
+    exclusive database to login data
+    user model
+    best views and html
 3.style pages
 4.details per book
 5.README

@@ -6,8 +6,9 @@ from .views import livros_list, livro_detail
 urlpatterns = [
     
     #HTML Interface 
-    path('', views.listar_livros, name='listar_livros'), #url to show books data
-    path('cadastrar/', views.cadastrar_livro, name='cadastrar_livro'), #url to register book data
+    path('lista/', views.lista_livros, name='lista_livros'), #url to show books data
+    path('cadastro_livros/', views.cadastro_livro, name='cadastro_livro'), #url to register book data
+    
 
     #API Interface
     path('api/livros/', livros_list), #especific route to list or create in JSON
