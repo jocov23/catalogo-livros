@@ -15,16 +15,16 @@ def cadastro_usuario(request):
 
         if confirmar_senha != password:
             mensagem = 'As senhas nao coincidem!'
-            return render(request, 'usuario/cadastro.html', {'mensagem': mensagem})
+            return render(request, 'cadastro.html', {'mensagem': mensagem})
         
         if User.objects.filter(username=username).exists():
             mensagem = 'Esse nome de usuário ja existe'
-            return render(request, 'usuario/cadastro.html', {'mensagem': mensagem})
+            return render(request, 'cadastro.html', {'mensagem': mensagem})
         
         user = User.objects.create_user(username=username, password=password)
         user.save()
         mensagem = 'Usuario criado com sucesso!'
-        return render(request, 'usuario/login', {'mensagem': mensagem})
+        return render(request, 'login.html', {'mensagem': mensagem})
     else:
          return render(request, 'cadastro.html', {'mensagem': mensagem})
 

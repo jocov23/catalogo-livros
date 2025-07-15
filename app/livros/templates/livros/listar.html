@@ -5,6 +5,8 @@
         <title>Lista de Livros</title>
     </head>
     <body>
+        <div>
+            <div>
         <h1>Livros Cadastrados</h1>
         <ul>
             {% for livro in livros%}
@@ -14,5 +16,7 @@
             {% endfor %}
         </ul>
         <a href = "{% url 'cadastro_livro' %}" title="Ir para cadastro de livros">Cadastrar novo livro</a> <!--button to redirect to the page of register-->
+            </div>
+        </div>
     </body>
 </html>
