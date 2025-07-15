@@ -1,28 +1,33 @@
+{% load static %}
+
 <!DOCTYPE html>
-<htnml>
+<htnml lang="pt-BR">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
        <title>Faça seu Login</title>
     </head>
     <body>
-        {% if mensagem %}
-            <p style="color:red">{{mensagem}}</p>
-        {% endif %}
+        <div class="login-container">
+            {% if mensagem %}
+                <p style="color:red">{{mensagem}}</p>
+            {% endif %}
 
-        <h1>Digite suas credenciais:</h1>
-        <form method="post">
-            {% csrf_token %}
+            <h1>Login</h1>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="Usuario">Usuário:</label>
+                    <input type="text" id="usuario" name="usuario" required><br><br>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required><br><br>
+                </div>
 
-            <label for="Usuario">Usuário:</label>
-            <input type="text" id="usuario" name="usuario" required><br><br>
-
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required><br><br>
-
-            <button type="submit">Enter</button>
-
-        </form>
-
-        <a href = "{% url 'cadastro' %}" title= "Ir para Cadastro">Não possui uma conta? Cadastre-se Já</a>
+                <button type="submit">Entrar</button>
+            </form>
+            <a href = "{% url 'cadastro' %}" title= "Ir para Cadastro">Não possui uma conta? Cadastre-se Já</a>
+        </div>
     </body>
 </htnml>
