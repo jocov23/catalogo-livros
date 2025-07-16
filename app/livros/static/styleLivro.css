@@ -1,4 +1,5 @@
 h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
     align-items:center;
     display: flex;
@@ -6,6 +7,7 @@ h1{
     color: #333;
 }
 a{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: sticky;
     top: 0;
     text-align: center;
