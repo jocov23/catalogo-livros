@@ -1,22 +1,45 @@
 <!--interface to show a list of books and a option below to redirect to register page of new books-->
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="{% static 'styleLivro.css' %}">
         <title>Lista de Livros</title>
     </head>
     <body>
-        <div>
-            <div>
         <h1>Livros Cadastrados</h1>
-        <ul>
-            {% for livro in livros%}
-            <li><strong>{{ livro.titulo }}</strong> ~ {{ livro.autor }} ({{livro.ano_publicacao }})</li>
-            {% empty %} <!--if there is no book registered-->
-                <li> Nenhum livro cadastrado ainda. Que tal cadastrar algum? </li>
-            {% endfor %}
-        </ul>
-        <a href = "{% url 'cadastro_livro' %}" title="Ir para cadastro de livros">Cadastrar novo livro</a> <!--button to redirect to the page of register-->
+        <div class="table">
+        <table>
+           
+            <div class="colunas"></div>
+                <thead>
+                
+                    <tr>
+                        <td>Título</td>
+                        <td>Autor</td>
+                        <td>Ano </td>
+                        <td>Editora</td>
+                    </tr>
+                </thead>
             </div>
+            <tbody>
+                <div class="items">
+                {% for livro in livros%}
+                    <tr>
+                        <td>{{ livro.titulo }}  </td>
+                        <td>{{ livro.autor }}  </td>
+                        <td>{{ livro.ano_publicacao }}</td>
+                        <td>{{ livro.editora }}  </td>
+                    </tr>
+                {% empty %} <!--if there is no book registered-->
+                    <li> Nenhum livro cadastrado ainda. Que tal cadastrar algum? </li>
+                {% endfor %}
+                </div>
+            </tbody>
+        </table>
         </div>
+        <a href = "{% url 'cadastro_livro' %}" title="Ir para cadastro de livros">Cadastrar novo livro</a> <!--button to redirect to the page of register-->
+           
+        
     </body>
 </html>
