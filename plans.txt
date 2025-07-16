@@ -3,9 +3,9 @@
     exclusive database to login data
     user model
     best views and html
-3.style pages
+3.style pages (in development)
 4.details per book
-5.README
-6.use guide
+5.README (finished)
+6.use guide (finished +-)
 7.opinion page per book
 8.option to see books readed, saved and added
