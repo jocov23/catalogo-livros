@@ -8,6 +8,7 @@ urlpatterns = [
     #HTML Interface 
     path('lista/', views.lista_livros, name='lista_livros'), #url to show books data
     path('cadastro_livros/', views.cadastro_livro, name='cadastro_livro'), #url to register book data
+    path('detalhes_livro/<int:livro_id>/', views.detalhes_livro, name='detalhes_livro'), #url to show book's details
     
 
     #API Interface

@@ -38,7 +38,11 @@ def lista_livros(request): #HTML
     livros = Livro.objects.all().order_by('-criado_em')
     return render(request, 'livros/listar.html', {'livros':livros})
 
-#-----------------------------------------
+#function to show book detail
+def detalhes_livro(request, livro_id):
+    a
+
+#---------------------------------------------------------------------------------------------------------------
 
 #function to create or request data from a book
 @api_view(['GET', 'POST']) #API

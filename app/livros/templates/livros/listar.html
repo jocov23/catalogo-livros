@@ -30,6 +30,7 @@
                         <td>{{ livro.autor }}  </td>
                         <td>{{ livro.ano_publicacao }}</td>
                         <td>{{ livro.editora }}  </td>
+                        <td> <a href= "{% url 'detalhes_livro' livro.id %}">Detalhes</a></td>
                     </tr>
                 {% empty %} <!--if there is no book registered-->
                     <li> Nenhum livro cadastrado ainda. Que tal cadastrar algum? </li>
