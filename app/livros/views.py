@@ -1,10 +1,11 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect, get_object_or_404
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from .forms import LivroForm
-from .models import Livro
+from .models import Livro, Sinopse
 from .serializers import LivroSerializer
+from django.contrib.auth.decorators import login_required
 #from django.contrib.auth.models import User
 #from django.contrib import messages
 
@@ -40,7 +41,16 @@ def lista_livros(request): #HTML
 
 #function to show book detail
 def detalhes_livro(request, livro_id):
-    a
+    livro = get_object_or_404(Livro, id=livro_id)
+    
+    if request.method == "POST":
+        conteudo = request.POST.get('conteudo')
+        if conteudo:
+            Sinopse.objects.create(livro=livro, conteudo=conteudo)
+            return redirect('detalhes_livro', livro_id=livro.id)
+        
+    sinopses=livro.sinopses.all().order_by('-criado_em')
+    return render(request, 'livros/detalhes.html', {'livro':livro, 'sinopses':sinopses})
 
 #---------------------------------------------------------------------------------------------------------------
 

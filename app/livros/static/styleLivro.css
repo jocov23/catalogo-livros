@@ -1,14 +1,42 @@
 
 
-h1{
+.lista{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    width: 100%;
+    text-align: center;
+    
+    table, td, th{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: 1px solid rgb(9, 9, 9);
+        min-height: 50px;
+        padding: 5px 10px;
+        border-collapse: collapse;
+        margin:0 auto;
+        width: 60%;
+        text-align: center;
+        
+
+        a{
+            font-size: 15px;
+        }
+    }
+    thead{
+        font-weight: bold;
+        font-size: 25px;
+        color: #6c704f;
+
+    }
+
+    h1{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
     align-items:center;
     display: flex;
     font-size: 80px;
     color: #333;
-}
-a{
+    }
+    a{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: sticky;
     top: 0;
@@ -17,21 +45,10 @@ a{
     margin-top: 20px;
     font-size: 30px;
     text-decoration: none;
-}
-table{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    width: 90%;
-    text-align: center;
-    border: 20px rgb(204, 20, 20);
-
-    thead{
-        font-weight: bold;
-        font-size: 25px;
-        color: #6c704f;
-
     }
 }
+
+
 
 
 .cadastroL{
@@ -47,6 +64,24 @@ table{
         margin: 0 auto;
         
         
+    }
+    h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items:center;
+    display: flex;
+    font-size: 80px;
+    color: #3f3f3f;
+    }
+    a{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    font-size: 30px;
+    text-decoration: none;
     }
     form{
         background-color: #414141;

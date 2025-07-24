@@ -8,13 +8,15 @@
     <title>Cadastro de Livro</title>
 </head>
 <body>
+    <div class="cadastroL">
+    {% if user.is_authenticated %}
     {% if mensagem %}
       <p style="color:red,">{{ mensagem }}</p>
     {% endif %}
 
     <h1>Cadastrar novo livro</h1>
     
-    <div class="cadastroL">
+    
         <h3>Digite as informações abaixo:</h3>
         <form method="post">
             {% csrf_token %}
@@ -33,7 +35,11 @@
         
             <button type="submit">Enviar</button>
         </form>
+    
+        <a href="{% url 'lista_livros' %} ">Ver Lista de Livros</a>
+    {% else %}
+    <p><a href="{% url 'login' %}">Faça login para adicionar uma sinopse.</a></p>
+    {% endif %}
     </div>
-    <a href="{% url 'lista_livros' %} ">Ver Lista de Livros</a>
 </body>
 </html>

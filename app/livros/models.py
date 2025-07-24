@@ -10,4 +10,13 @@ class Livro(models.Model):
     #register its mention by its own title
     def __str__(self):
         return self.titulo
+    
+class Sinopse(models.Model):
+    livro = models.ForeignKey(Livro, on_delete=models.CASCADE, related_name="sinopses")
+    conteudo = models.TextField()
+    criado_em = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Sinopse de {self.livro.titulo}"
+
 
