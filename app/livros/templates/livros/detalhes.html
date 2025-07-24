@@ -12,7 +12,7 @@
     <h3>Sinopses ja enviadas:</h3>
     <ul>
         {% for sinopse in sinopses%}
-            <li>{{ sinopse.conteudo }} <small>(em {{sinopse.criado_em}})</small></li>
+            <li>{{ sinopse.conteudo }} <small>(Por {{ sinopse.autor.username }} em {{ sinopse.criado_em|date:"d/m/Y H:i" }})</small></li>
         {% empty %}
             <li>Nenhuma sinopse ainda, que tal dar o primeiro passo?</li>
         {% endfor %}

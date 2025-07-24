@@ -6,7 +6,7 @@ from .forms import LivroForm
 from .models import Livro, Sinopse
 from .serializers import LivroSerializer
 from django.contrib.auth.decorators import login_required
-#from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 #from django.contrib import messages
 
 
@@ -46,7 +46,7 @@ def detalhes_livro(request, livro_id):
     if request.method == "POST":
         conteudo = request.POST.get('conteudo')
         if conteudo:
-            Sinopse.objects.create(livro=livro, conteudo=conteudo)
+            Sinopse.objects.create(livro=livro, conteudo=conteudo, autor = request.user )
             return redirect('detalhes_livro', livro_id=livro.id)
         
     sinopses=livro.sinopses.all().order_by('-criado_em')
