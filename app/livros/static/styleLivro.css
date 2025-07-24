@@ -126,3 +126,109 @@
         background-color: darkblue;
     }
 }
+.Detalhes{
+    *{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        
+       
+        
+        
+        
+    }
+    .Dados{
+        background-color: #1a2041;
+        height: 290px;
+        padding: 10px;
+        h1{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            justify-content: center;
+            align-items:center;
+            display: flex;
+            font-size: 80px;
+            color: #91957a;
+            margin-bottom: 10px;
+        }
+        h5{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            justify-content: center;
+            align-items:center;
+            display: flex;
+            font-size: 40px;
+            color: #3c2828;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        h6{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            justify-content: center;
+            align-items:center;
+            display: flex;
+            font-size: 15px;
+            color: #3f3f3f;
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+
+    }
+    
+    h3{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items:center;
+    display: flex;
+    font-size: 20px;
+    color: #3f3f3f;
+    margin-top: 40px;
+    }
+    h4{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    h6{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    align-items:center;
+    display: flex;
+    font-size: 15px;
+    color: #3f3f3f;
+    }
+    a{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    }
+    form{
+        
+        
+        border-radius: 10px;
+        padding:5px 10px;
+        color: #d1d1bf;
+
+        textarea{
+            display: block;
+            height: 200px;
+            
+        }
+    }
+    button{
+        background-color: #1a2041;
+        color:#fff;
+        padding: 10px 15px;
+        border:none;
+        border-radius: 8px;
+        cursor:pointer;
+        font-size: 16px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+    button:hover{
+        background-color: darkblue;
+    }
+    
+}

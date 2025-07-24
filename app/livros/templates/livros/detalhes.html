@@ -1,33 +1,39 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'styleLivro.css' %}">
     <title>Detalhes do livro</title>
 </head>
 <body>
-    <h1>{{ livro.titulo }}</h1>
-    <h5>{{ livro.autor }}</h5>
-    <h6>{{ livro.ano_publicacao }}</h6>
+    <div class="Detalhes">
+        <div class="Dados">
+        <h1>{{ livro.titulo }}</h1><br>
+        <h5>{{ livro.autor }}</h5>
+        <h6>{{ livro.ano_publicacao }}</h6><br>
+        </div>
 
-    <h3>Sinopses ja enviadas:</h3>
-    <ul>
-        {% for sinopse in sinopses%}
-            <li>{{ sinopse.conteudo }} <small>(Por {{ sinopse.autor.username }} em {{ sinopse.criado_em|date:"d/m/Y H:i" }})</small></li>
-        {% empty %}
-            <li>Nenhuma sinopse ainda, que tal dar o primeiro passo?</li>
-        {% endfor %}
-    </ul>
+        <h3>Sinopses enviadas:</h3>
+        <ul>
+            {% for sinopse in sinopses%}
+                <li>{{ sinopse.conteudo }} <small>(Por {{ sinopse.autor.username }} em {{ sinopse.criado_em|date:"d/m/Y H:i" }})</small></li><br><br>
+            {% empty %}
+                <li>Nenhuma sinopse ainda, que tal dar o primeiro passo?</li>
+            {% endfor %}
+        </ul>
 
-    <hr>
-    {% if user.is_authenticated %}
-    <h3>Adicione uma sinopse:</h3>
-    <form method="POST">
-        {% csrf_token %}
-        <textarea name="conteudo" rows="5" cols="60" placeholder="Escreva sua sinopse aqui"></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-    {% else %}
-    <p><a href="{% url 'login' %}">Faça login para adicionar uma sinopse.</a></p>
-    {% endif %}
+        <hr><br><br>
+        {% if user.is_authenticated %}
+        <h4>Adicione uma sinopse:</h3>
+        <form method="POST">
+            {% csrf_token %}
+            <textarea name="conteudo"  cols="150" placeholder="Escreva sua sinopse aqui"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        {% else %}
+        <p><a href="{% url 'login' %}">Faça login para adicionar uma sinopse.</a></p>
+        {% endif %}
+    </div>
 </body>
 </html>

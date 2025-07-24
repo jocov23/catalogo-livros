@@ -12,3 +12,4 @@
 9.Admin login and special perms
 10.Fix 'cadastrar novo livro' link position(finished)
 11.User authentication to modify book data (finished)
+12:dark mode
