@@ -9,20 +9,33 @@
 
 ## Technologies
   - **Frontend:**
-      - HTML
-      - CSS
+      - HTML5
+      - CSS3
 
   - **Backend/API:**
-      - Django framework (Python)
+      - Django framework (Python 3.13)
       - Django RESTful API
       - Docker & Docker-compose
-      - MySql
+      - MySql:8
       
 ## Initialization
 1. **Clone the repository:**
   ```
-  $ git clone https://github.com/jocov23/catalogo-livros-book-catalog.git
+    git clone https://github.com/jocov23/catalogo-livros.git
   ``` 
+2. **Go to the project directory**
+  ```
+    cd catalogo-livros
+  ```
+3. **Initialize the containers**
+  ```
+    docker-compose up --build -d
+  ```
+4. **Open your browser to http://localhost:8000 to view the project.**
+
+## Contact
+  - **E-mail:** jocov2309@gmail.com
+  - **LinkedIn:** https://www.linkedin.com/in/jo%C3%A3o-vitor-de-freitas-barbosa/
 
 
     

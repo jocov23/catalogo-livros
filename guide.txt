@@ -1,4 +1,3 @@
-commands to type when initiating the project
 
 #-d == run on background
 #--build == rebuild all containers
