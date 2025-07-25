@@ -4,7 +4,7 @@
     user model
     best views and html
 3.style pages (finished)
-4.details per book (in development)
+4.details per book (finished)
 5.README (finished)
 6.use guide (finished +-)
 7.opinion page per book

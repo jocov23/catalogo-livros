@@ -1,22 +1,10 @@
-  commands to type when initiating the project
+# Catalogo de livros (Book catalog)
+  This project is a full-stack web application made with Django Framework, which allow the register, listing and information specifying of books together with a user registration-login system
 
-  #-d == run on background   
-  #--build == rebuild all containers  
-  docker-compose up -d --build == initiate and start all the containers contained in the .yaml file
+  ## Features
+  - **Registration and Login of Users:** It is possible to create a profile
+  - **Registration of books:** Each logged user can add a book with its name,author, year and publisher
+  - **Listing page:** The previously added books can be seen on the initial page
+  - **creation of synopses and their visualization alongside other users:**Each user can create and see synopses created by others in a details page
 
-  #if Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:3306 -> 127.0.0.1:0: listen tcp 0.0.0.0:3306: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.  
-  try killing each process running in background related to mysql
-
-  #if container web command doesn't run automatically(idk why):  
-  docker-compose exec web bash == enter the CLI of the "web" container  
-  python manage.py runserver 0.0.0.0:8000 == start the django application contained in the "web" container  
-
- 
- small guide  
-  =docker-compose.yaml orchestrate the creation of 2 containers: web(django app) and bd(mysql instance)  
-  =dockerfile is the file which the container web use to its own creation, requirements and .env the same thing  
-  =urls when activated run a especific function(views) wich can contain CRUD operations or HTML templates  
-  =views are functions that interact with models  
-  =models are variables stored in a database through a django-rest-framework  
-  =serializer convert models to JSON  
-  =forms are a special class to convert models in HTML  
+  
