@@ -37,6 +37,9 @@
   - **E-mail:** jocov2309@gmail.com
   - **LinkedIn:** https://www.linkedin.com/in/jo%C3%A3o-vitor-de-freitas-barbosa/
 
+---
+
+Feel free to fork, start or contribute.
 
     
   
