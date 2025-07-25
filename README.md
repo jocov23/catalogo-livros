@@ -39,7 +39,7 @@
 
 ---
 
-Feel free to fork, start or contribute.
+Feel free to fork, star or contribute.
 
     
   
