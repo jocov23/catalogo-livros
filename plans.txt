@@ -6,10 +6,11 @@
 3.style pages (finished)
 4.details per book (finished)
 5.README (finished)
-6.use guide (finished +-)
+6.use guide (finished)
 7.opinion page per book
 8.option to see books readed, saved and added
 9.Admin login and special perms
 10.Fix 'cadastrar novo livro' link position(finished)
 11.User authentication to modify book data (finished)
-12:dark mode
+12:dark mode (only login-register section missing)
+13.put fixed sections ('Cadastrar novo livro', profile, darkmode button, etc)

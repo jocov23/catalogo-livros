@@ -22,7 +22,7 @@
                 <li>Nenhuma sinopse ainda, que tal dar o primeiro passo?</li>
             {% endfor %}
         </ul>
-
+        <a href="{% url 'lista_livros' %} ">Voltar para a Lista de Livros</a>
         <hr><br><br>
         {% if user.is_authenticated %}
         <h4>Adicione uma sinopse:</h3>

@@ -1,3 +1,7 @@
+*{
+    background-color:#414141;
+    color: #dcdcdc;
+}
 
 
 .lista{
@@ -8,7 +12,7 @@
     
     table, td, th{
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        border: 1px solid rgb(9, 9, 9);
+        border: 1px solid rgb(155, 145, 81);
         min-height: 50px;
         padding: 5px 10px;
         border-collapse: collapse;
@@ -19,6 +23,7 @@
 
         a{
             font-size: 15px;
+            color: #c6e849;
         }
     }
     thead{
@@ -34,7 +39,7 @@
     align-items:center;
     display: flex;
     font-size: 80px;
-    color: #333;
+    color: #959674;
     }
     a{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -45,6 +50,7 @@
     margin-top: 20px;
     font-size: 30px;
     text-decoration: none;
+    color: #f7fafe;
     }
 }
 
@@ -60,8 +66,9 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-       
+        
         margin: 0 auto;
+        
         
         
     }
@@ -71,7 +78,7 @@
     align-items:center;
     display: flex;
     font-size: 80px;
-    color: #3f3f3f;
+    color: #959674;
     }
     a{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -84,7 +91,7 @@
     text-decoration: none;
     }
     form{
-        background-color: #414141;
+        background-color: #202020;
         height:100x;
         width:300px;
         border-radius: 10px;
@@ -101,6 +108,7 @@
         text-align: left;
         margin-left: 10px;
         font-size: 25px;
+        background-color: #202020;
     }
     input{
         background-color: #333;
@@ -149,6 +157,7 @@
             font-size: 80px;
             color: #91957a;
             margin-bottom: 10px;
+            background-color: #1a2041;
         }
         h5{
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -156,9 +165,10 @@
             align-items:center;
             display: flex;
             font-size: 40px;
-            color: #3c2828;
+            color: #3a505e;
             margin-bottom: 10px;
             margin-top: 10px;
+            background-color: #1a2041;
         }
         h6{
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -166,9 +176,10 @@
             align-items:center;
             display: flex;
             font-size: 15px;
-            color: #3f3f3f;
+            color: #4a7684;
             margin-bottom: 10px;
             margin-top: 5px;
+            background-color: #1a2041;
         }
 
     }
@@ -179,7 +190,7 @@
     align-items:center;
     display: flex;
     font-size: 20px;
-    color: #3f3f3f;
+    color: #d0cccc;
     margin-top: 40px;
     }
     h4{
