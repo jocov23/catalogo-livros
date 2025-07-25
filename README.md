@@ -19,10 +19,10 @@
       - MySql
       
 ## Initialization
-  1. **Clone the repository:**
-    ```bash
-      git clone https://github.com/jocov23/catalogo-livros-book-catalog.git
-    ``` 
+1. **Clone the repository:**
+  ```
+  $ git clone https://github.com/jocov23/catalogo-livros-book-catalog.git
+  ``` 
 
 
     
