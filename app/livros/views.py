@@ -3,7 +3,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from .forms import LivroForm
-from .models import Livro, Sinopse
+from .models import Livro, Sinopse, Opiniao
 from .serializers import LivroSerializer
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -40,17 +40,34 @@ def lista_livros(request): #HTML
     return render(request, 'livros/listar.html', {'livros':livros})
 
 #function to show book detail
-def detalhes_livro(request, livro_id):
-    livro = get_object_or_404(Livro, id=livro_id)
+def detalhes_livro(request, slug):
+    livro = get_object_or_404(Livro, slug=slug ) 
     
     if request.method == "POST":
         conteudo = request.POST.get('conteudo')
         if conteudo:
             Sinopse.objects.create(livro=livro, conteudo=conteudo, autor = request.user )
-            return redirect('detalhes_livro', livro_id=livro.id)
+            return redirect('detalhes_livro', slug=slug)
         
     sinopses=livro.sinopses.all().order_by('-criado_em')
     return render(request, 'livros/detalhes.html', {'livro':livro, 'sinopses':sinopses})
+
+def opiniao_livro(request, slug):
+    livro = get_object_or_404(Livro, slug=slug)
+
+    if request.method == "POST":
+        conteudo = request.POST.get('conteudo')
+        if conteudo:
+            Opiniao.objects.create(livro=livro, conteudo=conteudo, autor = request.user)
+            return redirect(opiniao_livro, slug=slug)
+        
+    opinions=livro.opinions.all().order_by('-criado_em')
+    return render(request, 'livros/opiniao.html', {'livro':livro, 'opinions':opinions})
+
+        
+
+        
+            
 
 #---------------------------------------------------------------------------------------------------------------
 

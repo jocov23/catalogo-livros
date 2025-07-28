@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'styleLivro.css' %}">
+    <title>Detalhes do livro</title>
+</head>
+<body>
+    <div class="Detalhes">
+        <div class="Dados">
+        <h1>{{ livro.titulo }}</h1><br>
+        <h5>{{ livro.autor }}</h5>
+        <h6>{{ livro.ano_publicacao }}</h6><br>
+        </div>
+
+        <h3>Opiniões enviadas:</h3>
+        <ul>
+            {% for opiniao in opinions %}
+                <li>{{ opiniao.conteudo }} <small>(Por {{ opiniao.autor.username }} em {{ opiniao.criado_em|date:"d/m/Y H:i" }})</small></li><br><br>
+            {% empty %}
+                <li>Nenhuma opinião ainda, que tal dar o primeiro passo?</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'lista_livros' %} ">Voltar para a Lista de Livros</a>
+        <hr><br><br>
+        {% if user.is_authenticated %}
+        <h4>Adicione uma opinião:</h3>
+        <form method="POST">
+            {% csrf_token %}
+            <textarea name="conteudo"  cols="150" placeholder="Escreva sua opinião aqui"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        {% else %}
+        <p><a href="{% url 'login' %}">Faça login para adicionar uma opinião.</a></p>
+        {% endif %}
+    </div>
+</body>
+</html>

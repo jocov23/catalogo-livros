@@ -15,3 +15,4 @@
 12:dark page theme (finished)
 13.put fixed sections ('Cadastrar novo livro', profile, darkmode button, etc) 
 14.fill more books in the list add details of each
+15: modify livro_id in the URLS to its title

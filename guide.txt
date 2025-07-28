@@ -1,3 +1,6 @@
+Django admin:
+user:admin
+password:admin
 
 #-d == run on background
 #--build == rebuild all containers
