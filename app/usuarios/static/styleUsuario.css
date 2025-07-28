@@ -2,27 +2,31 @@
     margin: 0;
     padding: 0;
     border: 0;
+    background-color:#414141;
+    color: #dcdcdc;
+
 }
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
+    background-color: #414141;
     display: flex;
     justify-content: center;
     align-items:center;
     height:100vh;
 }
 .login-container{
-    background-color: #fff;
+    background-color:#414141;
     padding:20px 50px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0.2);
     text-align: center;
     width:300px;
     height:300x;
+    color: #dcdcdc;
 
     h1{
         margin-bottom: 20px;
-        color: #333;
+        color:  #dcdcdc;;
     }
     .form-group{
         margin-bottom: 15px;
@@ -32,7 +36,7 @@ body{
         display: block;
         font-size:18px;
         margin-bottom: 5px;
-        color: #333
+        color: #dcdcdc
     }
     input{
         width: 280px;
