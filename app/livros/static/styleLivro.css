@@ -9,6 +9,11 @@
     
     width: 100%;
     text-align: center;
+
+    .table{
+        margin-bottom: 60px;
+        
+    }
     
     table, td, th{
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,7 +29,11 @@
         a{
             font-size: 15px;
             color: #c6e849;
+            position: relative;
+            text-decoration: none;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
         }
+
     }
     thead{
         font-weight: bold;
@@ -41,18 +50,37 @@
     font-size: 80px;
     color: #959674;
     }
-    a{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: sticky;
-    top: 0;
-    text-align: center;
-    display: block;
-    margin-top: 20px;
-    font-size: 30px;
-    text-decoration: none;
-    color: #f7fafe;
+    .link_baixo{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color:#6c704f;
+        position: fixed;
+        padding: 5px 0;
+        
+        border:1px #d87314;
+
+        a{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+            margin-top: 20px;
+            font-size: 30px;
+            text-decoration: none;
+            color: #f7fafe;
+            background-color: #6c704f;
+            
+            
+        }
+    }
+    .link_baixo:hover{
+        background-color: #91957a;
+        a{
+            background-color: #91957a;
+        }
     }
 }
+
 
 
 
