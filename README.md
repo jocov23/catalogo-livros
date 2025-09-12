@@ -20,6 +20,9 @@
       - MySql:8
       
 ## Initialization
+ ```
+   WARNING: you must have docker desktop installed and opened in your device before-hand!! 
+  ```
 1. **Clone the repository:**
   ```
     git clone https://github.com/jocov23/catalogo-livros.git
