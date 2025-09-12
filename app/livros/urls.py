@@ -10,6 +10,7 @@ urlpatterns = [
     path('cadastro_livros/', views.cadastro_livro, name='cadastro_livro'), #url to register book data
     path('detalhes_livro/<slug:slug>/', views.detalhes_livro, name='detalhes_livro'), #url to show book's details
     path('opiniao_livro/<slug:slug>/', views.opiniao_livro, name='opiniao_livro'), #url to show book's opinion
+    path('contato/', views.contato, name='contato'), #url to show my info
     
 
     #API Interface

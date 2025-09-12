@@ -1,8 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
 *{
     background-color:#414141;
     color: #dcdcdc;
 }
 
+.navbar{
+        position: fixed;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        a{
+            text-decoration: none;
+        }
+        .nav_items{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            gap: 30px;
+            list-style: none;
+            
+            li a:hover {
+                color: #c6e849;
+            }
+            button{
+                padding: 5px 15px;
+                background-color: #7b8d39;
+                border:none;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color:#c6e849 ;
+            }
+        }
+}
 
 .lista{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -79,6 +117,8 @@
             background-color: #91957a;
         }
     }
+
+    
 }
 
 
@@ -107,6 +147,7 @@
     display: flex;
     font-size: 80px;
     color: #959674;
+    padding:60px;
     }
     a{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -271,4 +312,30 @@
         background-color: darkblue;
     }
     
+}
+.contato{
+    h1{
+        padding-top: 150px;
+        font-size: 70px;
+        padding-left: 10px;
+    }
+    h1:hover{
+        padding-top: 150px;
+        font-size: 70px;
+        padding-left: 10px;
+        color: #00ff59;
+    }
+    h2, h3, h4, h5{
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 10px;
+        
+        
+    }
+    h2:hover, h3:hover, h4:hover, h5:hover{
+        text-align: left;
+        padding-top: 20px;
+        color: #0adf55;
+        
+    }
 }

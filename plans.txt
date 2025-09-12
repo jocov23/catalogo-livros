@@ -7,7 +7,7 @@
 4.details per book (finished)
 5.README (finished)
 6.use guide (finished)
-7.opinion page per book (finished)
+7.opinion page per book (finished) 
 8.option to see books readed, saved and added
 9.Admin login and special perms
 10.Fix 'cadastrar novo livro' link position(finished)
@@ -17,4 +17,4 @@
 14.fill more books in the list add details of each
 15: modify livro_id in the URLS to its title(finished)
 16.book search field
-17.fixed section in the top with, books, authors, logins, user
+17.fixed section in the top with: books, authors, logout, hello user, search field

@@ -8,6 +8,24 @@
     <title>Cadastro de Livro</title>
 </head>
 <body class="theme--dark">
+    <nav class="navbar">
+            <ul class="nav_items">
+                <li>Olá {{ user.username }}!</li>
+                <li><a href="{% url 'lista_livros' %}" title="Ir para a lista de livros">Lista</a></li>
+                <li><a href="{% url 'cadastro_livro' %}" title="Cadastrar novo livro"> Cadastrar novo livro</a></li>
+                <li><a href="{% url 'contato' %}" title="Contato">Contato</a></li>
+                {% if user.is_authenticated %}
+                <li><form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Sair</button>
+                </form></li>
+                {% else %}
+                <li><a href="{% url 'login' %}" title="Login">Entrar</a></li>
+                {% endif %}
+                
+                
+            </ul>
+        </nav>
     <div class="cadastroL">
     {% if user.is_authenticated %}
     {% if mensagem %}

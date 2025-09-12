@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'styleLivro.css' %}">
+    <title>Contato</title>
+</head>
+<body>
+
+    
+</body>
+    <nav class="navbar">
+            <ul class="nav_items">
+                <li>Olá {{ user.username }}!</li>
+                <li><a href="{% url 'lista_livros' %}" title="Ir para a lista de livros">Lista</a></li>
+                <li><a href="{% url 'cadastro_livro' %}" title="Cadastrar novo livro"> Cadastrar novo livro</a></li>
+                <li><a href="{% url 'contato' %}" title="Contato">Contato</a></li>
+                {% if user.is_authenticated %}
+                <li><form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Sair</button>
+                </form></li>
+                {% else %}
+                <li><a href="{% url 'login' %}" title="Login">Entrar</a></li>
+                {% endif %}
+                
+                
+            </ul>
+        </nav>
+        <div class="contato">
+            <h1>Informações:</h1>
+            <h3>E-mail: jocov2309@gmail.com</h3><br>
+            <h3>LinkedIn: https://www.linkedin.com/in/joao-vitor-de-freitas-barbosa/</h3><br>
+            <h3>Github: https://github.com/jocov23</h3><br>
+                
+                
+            </h5>
+        </div>
+</html>

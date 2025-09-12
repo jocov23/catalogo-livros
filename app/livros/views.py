@@ -64,7 +64,8 @@ def opiniao_livro(request, slug):
     opinions=livro.opinions.all().order_by('-criado_em')
     return render(request, 'livros/opiniao.html', {'livro':livro, 'opinions':opinions})
 
-        
+def contato(request):
+    return render(request, 'livros/contato.html')
 
         
             
