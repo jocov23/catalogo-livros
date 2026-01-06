@@ -29,7 +29,7 @@
     <div class="cadastroL">
     {% if user.is_authenticated %}
     {% if mensagem %}
-      <p style="color:red,">{{ mensagem }}</p>
+      <br><br><br><br><h2 style="color:red; font-size: 40px;">{{ mensagem }}</h2>
     {% endif %}
 
     <h1>Cadastrar novo livro</h1>
@@ -50,6 +50,9 @@
 
             <label for="editora">Editora:</label>
             <input type="text" id="editora" name="editora" required><br><br>
+
+            <label for="imagem">Imagem:</label>
+            <input type="file" id="imagem" name="imagem"><br><br>
         
             <button type="submit">Enviar</button>
         </form>

@@ -20,15 +20,17 @@ def cadastro_livro(request): #HTML #submit book
         autor = request.POST.get ('autor')
         ano_publicacao = request.POST.get ('ano_publicacao')
         editora = request.POST.get ('editora')
+        imagem = request.POST.get ('imagem')
 
-        if Livro.objects.filter(titulo=titulo, autor=autor).exists(): #verify if the book already exists
+        if Livro.objects.filter(titulo=titulo, autor=autor, editora=editora).exists(): #verify if the book already exists
             mensagem = 'Este livro já foi adicionado!'
         else:
             Livro.objects.create(
                 titulo=titulo,
                 autor=autor,
                 ano_publicacao=ano_publicacao,
-                editora=editora
+                editora=editora,
+                imagem=imagem
             )
             return redirect('lista_livros')
         

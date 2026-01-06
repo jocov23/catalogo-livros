@@ -11,6 +11,7 @@ class Livro(models.Model):
     editora = models.CharField(max_length=100)
     criado_em = models.DateTimeField(auto_now_add=True)
     slug=models.SlugField( blank=True, null=True, unique=True)
+    imagem=models.ImageField(null=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:

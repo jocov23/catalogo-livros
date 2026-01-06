@@ -18,3 +18,6 @@
 15: modify livro_id in the URLS to its title(finished)
 16.book search field
 17.fixed section in the top with: books, authors, logout, hello user (finished)
+18.revamp the list page, make the books appear in one in the side of another, with its pic appearing above its name
+19.a option to add pics with book without it
+20.put a pic field in cadastro_livro
