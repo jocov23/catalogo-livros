@@ -15,6 +15,8 @@
         top: 0;
         left: 0;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #414141;
+        z-index: 1000;
 
         a{
             text-decoration: none;
@@ -27,17 +29,18 @@
             list-style: none;
             
             li a:hover {
-                color: #c6e849;
+                color: #cbee04;
             }
             button{
                 padding: 5px 15px;
-                background-color: #7b8d39;
+                background-color: #000000;
                 border:none;
                 border-radius: 50px;
                 cursor: pointer;
+                
             }
             button:hover{
-                background-color:#c6e849 ;
+                background-color:#333d09 ;
             }
         }
 }
@@ -45,82 +48,135 @@
 .lista{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
-    width: 100%;
-    text-align: center;
-
-    .table{
-        margin-bottom: 60px;
-        
-    }
+}
     
-    table, td, th{
+    
+  
+    
+.lista a{
+    font-size: 15px;
+    color: #000000;
+    position: relative;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+.cardsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap:25px;
+    margin-top: 40px;
+}
+
+.cardImagem{    
+    overflow:scroll;
+    border-radius: 12px;
+    margin-bottom: 15px; 
+}
+
+.cardImagem img{
+            
+    object-fit:fill;
+    width: 180px;
+    height: 180px;
+    border-radius: 6px;
+}
+
+.cardLivro{
+    
+    border-radius: 15px;
+    padding: 1px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    justify-content: space-between;
+    transition: transform 0.2 ease;
         
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        border: 1px solid rgb(155, 145, 81);
-        min-height: 50px;
-        padding: 5px 10px;
-        border-collapse: collapse;
-        margin:0 auto;
-        width: 60%;
-        text-align: center;
+}
+.cardLivro:hover{
+    transform: translateY(-5px);
+}
+
+.cardConteudo h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+    
+.cardConteudo p{
+    margin: 4px 0;
+    font-size:14px;
         
+}
+.cardLinks{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    text-align: center;
+}
+.cardLinks a{
+    background-color: #cbee04;
+    font-size: 20px;
+    width: 100%;
+    padding: 3px 0;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    
 
-        a{
-            font-size: 15px;
-            color: #c6e849;
-            position: relative;
-            text-decoration: none;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-        }
+    
+    
+}
 
-    }
-    thead{
-        font-weight: bold;
-        font-size: 25px;
-        color: #6c704f;
+thead{
+    font-weight: bold;
+    font-size: 25px;
+    color: #6c704f;
+}
 
-    }
-
-    h1{
+.lista h1{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
     align-items:center;
     display: flex;
     font-size: 80px;
     color: #959674;
-    }
-    .link_baixo{
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        background-color:#6c704f;
-        position: fixed;
-        padding: 5px 0;
+}
+.link_baixo{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color:#6c704f;
+    position: fixed;
+    padding: 5px 0;
         
-        border:1px #d87314;
-
-        a{
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border:1px #d87314;
+}
+.link_baixo a{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             
-            margin-top: 20px;
-            font-size: 30px;
-            text-decoration: none;
-            color: #f7fafe;
-            background-color: #6c704f;
+    margin-top: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #f7fafe;
+    background-color: #6c704f;
             
             
-        }
-    }
-    .link_baixo:hover{
-        background-color: #91957a;
-        a{
-            background-color: #91957a;
-        }
-    }
+}
+    
+.link_baixo:hover{
+    background-color: #91957a;
+}
+.link_baixo:hover a {
+    background-color: #91957a;
+}
 
     
-}
+
 
 
 

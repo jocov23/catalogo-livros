@@ -27,35 +27,32 @@
         </nav>
         <div class="lista">
             <h1>Livros Cadastrados</h1>
-            <div class="table">
-            <table>
-                <div class="colunas">
-                    <thead>
-                        <tr>
-                            <td>Título</td>
-                            <td>Autor</td>
-                            <td>Ano </td>
-                            <td>Editora</td>
-                        </tr>
-                    </thead>
-                </div>
-                <tbody>
-                    <div class="items">
-                    {% for livro in livros%}
-                        <tr>
-                            <td>{{ livro.titulo }}  </td>
-                            <td>{{ livro.autor }}  </td>
-                            <td>{{ livro.ano_publicacao }}</td>
-                            <td>{{ livro.editora }}  </td>
-                            <td> <a href= "{% url 'detalhes_livro' livro.slug %}">Detalhes</a></td>
-                            <td> <a href= "{% url 'opiniao_livro' livro.slug %}">Opiniões</a></td>
-                        </tr>
-                    {% empty %} <!--if there is no book registered-->
-                        <li> Nenhum livro cadastrado ainda. Que tal cadastrar algum? </li>
-                    {% endfor %}
+            <div class="cardsContainer">
+                {% for livro in livros%}
+                    <div class="cardLivro">
+                        <div class="cardImagem">
+                            {% if livro.imagem %}
+                                <img src="{{ livro.imagem.url }}" alt="Capa do livro {{ livro.titulo }}">
+                            {% else %}
+                                <img src="{% static 'img/sem_capa.png' %}" alt="Livro sem imagem">
+                            {% endif %}
+                        </div>
+                        <div class="cardConteudo">
+                            
+                                <h2>{{ livro.titulo }}</h2>  
+                                <p>{{ livro.autor }}</p>
+                                <p>{{ livro.ano_publicacao }}</p>
+                                <p>{{ livro.editora }}</p> 
+                        </div>
+                        <div class="cardLinks">
+                                <a href= "{% url 'detalhes_livro' livro.slug %}">Detalhes</a><br>
+                                <a href= "{% url 'opiniao_livro' livro.slug %}">Opiniões</a>
+                            
+                        </div>
                     </div>
-                </tbody>
-            </table>
+                {% empty %} <!--if there is no book registered-->
+                    <li> Nenhum livro cadastrado ainda. Que tal cadastrar algum? </li>
+                {% endfor %}
             </div>
             <div class="link_baixo">
                 <a href = "{% url 'cadastro_livro' %}" title="Ir para cadastro de livros">Cadastrar novo livro</a> <!--button to redirect to the page of register-->

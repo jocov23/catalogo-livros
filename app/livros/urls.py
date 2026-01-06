@@ -2,6 +2,8 @@ from django.urls import path, include
 from . import views
 from rest_framework.routers import DefaultRouter
 from .views import livros_list, livro_detail
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     
@@ -17,3 +19,4 @@ urlpatterns = [
     path('api/livros/', livros_list), #especific route to list or create in JSON
     path('api/livros/<int:pk>/', livro_detail),  #especific route to show, modify or delete data in JSON
 ]
+

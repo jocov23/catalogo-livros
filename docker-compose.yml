@@ -9,6 +9,7 @@ services:
       MYSQL_PASSWORD: userpass
     volumes:
       - db_data:/var/lib/mysql
+      - ./media:/app/media
     ports:
       - "3306:3306"
 #create the web container which store/run the django app and all the configs for the app
