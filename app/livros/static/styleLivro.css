@@ -272,43 +272,46 @@ thead{
         
     }
     
-    .Dados{
-        background-color: #1a2041;
+    .dados{
+        background: linear-gradient(135deg, #1c2340, #0f1530);
+        border-radius: 20px;
         height: 290px;
-        padding: 10px;
+        padding: 40px;
+        margin-top: 50px;
+
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    
         h1{
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            justify-content: center;
-            align-items:center;
-            display: flex;
-            font-size: 80px;
-            color: #91957a;
+            font-size: 42px;
             margin-bottom: 10px;
-            background-color: #1a2041;
+            color: #c6e849;
+            background: linear-gradient(135deg, #1c2340, #0f1530);
+            
         }
-        h5{
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            justify-content: center;
-            align-items:center;
-            display: flex;
-            font-size: 40px;
-            color: #3a505e;
-            margin-bottom: 10px;
-            margin-top: 10px;
-            background-color: #1a2041;
+        h2{
+            font-size: 22px;
+            font-weight: 400;
+            color:#b0b0b0;
+            background: linear-gradient(135deg, #1c2340, #0f1530);
         }
-        h6{
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            justify-content: center;
-            align-items:center;
-            display: flex;
-            font-size: 15px;
-            color: #4a7684;
-            margin-bottom: 10px;
-            margin-top: 5px;
-            background-color: #1a2041;
+        span{
+            font-size: 14px;
+            opacity: 0.7;
+            background: linear-gradient(135deg, #1c2340, #0f1530);
         }
 
+    }
+    .dados img{
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
+
+        border-radius: 12px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        background-color: #111;
     }
     .linkVolta a{
             color:#91957a;
@@ -379,6 +382,7 @@ thead{
     }
     
 }
+
 .imagem img{
         object-fit:fill;
         width: 180px;

@@ -27,7 +27,6 @@
         </nav>
     <div class="Detalhes">
         <div class="dados">
-        <h1>{{ livro.titulo }}</h1><br>
         <div class="imagem">
         {% if livro.imagem  %}
             <img src="{{livro.imagem.url}}" alt="Capa do livro {{livro.titulo}}">
@@ -35,8 +34,9 @@
             <img src="{%static 'img/sem_capa.png' %}" alt="Livro sem capa">
         {% endif %}
         </div>
-        <h5>{{ livro.autor }}</h5>
-        <h6>{{ livro.ano_publicacao }}</h6><br>
+        <h1>{{ livro.titulo }}</h1><br>
+        <h2>{{ livro.autor }}</h2>
+        <span>{{ livro.ano_publicacao }}</span><br>
         </div>
 
         <h3>Sinopses enviadas:</h3>
