@@ -26,8 +26,15 @@
             </ul>
         </nav>
     <div class="Detalhes">
-        <div class="Dados">
+        <div class="dados">
         <h1>{{ livro.titulo }}</h1><br>
+        <div class="imagem">
+        {% if livro.imagem  %}
+            <img src="{{livro.imagem.url}}" alt="Capa do livro {{livro.titulo}}">
+        {% else %}
+            <img src="{%static 'img/sem_capa.png' %}" alt="Livro sem capa">
+        {% endif %}
+        </div>
         <h5>{{ livro.autor }}</h5>
         <h6>{{ livro.ano_publicacao }}</h6><br>
         </div>
@@ -40,7 +47,13 @@
                 <li>Nenhuma sinopse ainda, que tal dar o primeiro passo?</li>
             {% endfor %}
         </ul>
-        <a href="{% url 'lista_livros' %} ">Voltar para a Lista de Livros</a>
+        <div class="linkVolta">
+            <a href="{% url 'lista_livros' %}">Voltar para a Lista de Livros</a>
+        </div>
+        <br>
+        <div class="linkOpina">
+            <a href="{% url 'opiniao_livro' livro.slug %}">Ir para a pagina de Opinião</a>
+        </div>
         <hr><br><br>
         {% if user.is_authenticated %}
         <h4>Adicione uma sinopse:</h3>

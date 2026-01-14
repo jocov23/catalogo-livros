@@ -271,6 +271,7 @@ thead{
         
         
     }
+    
     .Dados{
         background-color: #1a2041;
         height: 290px;
@@ -309,7 +310,15 @@ thead{
         }
 
     }
-    
+    .linkVolta a{
+            color:#91957a;
+        }
+    .linkOpina a{
+        color:#1a2041;
+    }
+     .linkDetalhe a{
+        color:#1a2041;
+    }
     h3{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
@@ -369,6 +378,18 @@ thead{
         background-color: darkblue;
     }
     
+}
+.imagem img{
+        object-fit:fill;
+        width: 180px;
+        height: 180px;
+        border-radius: 6px;
+        background-color: #1a2041;
+    }
+.imagem{    
+    overflow:scroll;
+    border-radius: 12px;
+    margin-bottom: 15px; 
 }
 .contato{
     h1{

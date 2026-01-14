@@ -40,7 +40,13 @@
                 <li>Nenhuma opinião ainda, que tal dar o primeiro passo?</li>
             {% endfor %}
         </ul>
-        <a href="{% url 'lista_livros' %} ">Voltar para a Lista de Livros</a>
+        <div class="linkVolta">
+            <a href="{% url 'lista_livros' %} ">Voltar para a Lista de Livros</a>
+        </div>
+        <br>
+        <div class="linkDetalhe">
+            <a href="{% url 'detalhes_livro' livro.slug %}">Ir para a pagina de detalhes</a>
+        </div>
         <hr><br><br>
         {% if user.is_authenticated %}
         <h4>Adicione uma opinião:</h3>
