@@ -19,5 +19,8 @@
 16.book search field
 17.fixed section in the top with: books, authors, logout, hello user (finished)
 18.revamp the list page, make the books appear in one in the side of another, with its pic appearing above its name(finished)
-19.a option to add pics with book without it 
+19.a option to add pics with book without it (finished)
 20.put a pic field in cadastro_livro (finished)
+21.AI integration (ambitious)(idk how)
+22.add navbar to login and register pages, and other missing pages
+23.add 'by jocov' in the extreme other side of the navbar

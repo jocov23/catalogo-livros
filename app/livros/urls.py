@@ -13,6 +13,7 @@ urlpatterns = [
     path('detalhes_livro/<slug:slug>/', views.detalhes_livro, name='detalhes_livro'), #url to show book's details
     path('opiniao_livro/<slug:slug>/', views.opiniao_livro, name='opiniao_livro'), #url to show book's opinion
     path('contato/', views.contato, name='contato'), #url to show my info
+    path('add_capa/<slug:slug>/', views.add_capa, name='add_capa'), #url to add book's cover
     
 
     #API Interface

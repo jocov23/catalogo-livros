@@ -69,6 +69,19 @@ def opiniao_livro(request, slug):
 def contato(request):
     return render(request, 'livros/contato.html')
 
+def add_capa(request, slug):
+    livro = get_object_or_404(Livro, slug=slug)
+    
+    if request.method == 'POST':
+        imagem=request.FILES.get ('imagem')
+
+        if imagem:
+            livro.imagem = imagem
+            livro.save()
+            return redirect(detalhes_livro, slug=slug)
+
+    return render (request, 'livros/add_capa.html',{'livro':livro})
+
         
             
 

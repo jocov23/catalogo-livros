@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'styleLivro.css' %}">
     <title>Cadastro de Livro</title>
 </head>
-<body class="theme--dark">
+<body>
     <nav class="navbar">
             <ul class="nav_items">
                 <li>Olá {{ user.username }}!</li>
@@ -52,13 +52,14 @@
             <input type="text" id="editora" name="editora" required><br><br>
 
             <label for="imagem">Imagem:</label>
-            <input type="file" id="imagem" name="imagem"><br><br>
+            <input type="file" id="imagem" name="imagem" class="cadastroImagem"><br><br>
         
             <button type="submit">Enviar</button>
         </form>
     
         <a href="{% url 'lista_livros' %} ">Ver Lista de Livros</a>
     {% else %}
+    <br><br><br><br><br><br>
     <p><a href="{% url 'login' %}">Faça login para adicionar uma sinopse.</a></p>
     {% endif %}
     </div>

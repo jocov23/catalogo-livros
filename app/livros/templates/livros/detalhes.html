@@ -32,11 +32,14 @@
             <img src="{{livro.imagem.url}}" alt="Capa do livro {{livro.titulo}}">
         {% else %}
             <img src="{%static 'img/sem_capa.png' %}" alt="Livro sem capa">
+            <br>
+            <a href="{% url 'add_capa' livro.slug %}" title="Adicionar capa" class="linkAddCapa">Deseja adicionar uma capa?</a>
         {% endif %}
         </div>
         <h1>{{ livro.titulo }}</h1><br>
         <h2>{{ livro.autor }}</h2>
         <span>{{ livro.ano_publicacao }}</span><br>
+        <span>{{ livro.editora }}</span><br>
         </div>
 
         <h3>Sinopses enviadas:</h3>

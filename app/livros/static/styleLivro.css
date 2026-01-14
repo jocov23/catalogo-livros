@@ -247,6 +247,9 @@ thead{
         font-size: 20px;
         text-align: left;
     }
+    .cadastroImagem{
+        cursor: pointer;
+    }
      button{
         background-color: #1a2041;
         color:#fff;
@@ -303,6 +306,11 @@ thead{
             background: linear-gradient(135deg, #1c2340, #0f1530);
         }
 
+    }
+    .linkAddCapa a{
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #c6e849;
     }
     .dados img{
         width: 260px;
@@ -382,7 +390,18 @@ thead{
     }
     
 }
-
+.imagem a{
+    display: inline-block;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #1c2340, #0f1530);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight:lighter;
+    text-decoration: none;
+}
+.imagem a:hover{
+    background: #161f3b;
+}
 .imagem img{
         object-fit:fill;
         width: 180px;
@@ -394,7 +413,9 @@ thead{
     overflow:scroll;
     border-radius: 12px;
     margin-bottom: 15px; 
+    background-color:  #161f3b;
 }
+
 .contato{
     h1{
         padding-top: 150px;
@@ -420,4 +441,65 @@ thead{
         color: #0adf55;
         
     }
+}
+.formCapa{
+    max-width: 500px;
+    margin: 80px auto;
+    background: linear-gradient(135deg, #0f1b3d, #121f4a);
+    padding: 40px;
+
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eaeaea;
+}
+.formCapa h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    background: linear-gradient(135deg, #0f1b3d, #121f4a);
+}
+.formCapa form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: linear-gradient(135deg, #0f1b3d, #121f4a);
+}
+.formCapa label{
+        display:block;
+        text-align: left;
+        margin-left: 10px;
+        font-size: 25px;
+        background-color:#232941
+        
+    }
+.formCapa input[type=file]{
+        background-color: rgba(255, 255, 255, 0.08);
+        color: #eaeaea; 
+        border: 1px dashed rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        width: 280px;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 12px;
+    }
+.formCapa button{
+        background-color: #1a2041;
+        color:#fff;
+        padding: 10px 15px;
+        border:none;
+        border-radius: 8px;
+        cursor:pointer;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+.formCapa button:hover{
+        background-color: darkblue;
+    }
+.formCapa a{
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    
 }
