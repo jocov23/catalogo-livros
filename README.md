@@ -9,7 +9,7 @@
   - **Listing page:** The previously added books can be seen on the initial page
   - **creation of synopses and their visualization alongside other users:** Each user can create and see synopses created by others in a details page
   - **creation of opinions ant their visualization alongside other users:** Each user can create and see opinions about selected books created by others in a details page
-(https://github.com/user-attachments/assets/ad96a288-0077-4783-b58b-a578f010ccc0
+
 <div display="grid align="center">
   <img src="https://github.com/user-attachments/assets/48f8cd44-4100-4622-8c37-21d529e54808" width="400px" />
   <img src="https://github.com/user-attachments/assets/ad96a288-0077-4783-b58b-a578f010ccc0" width="400px" />
