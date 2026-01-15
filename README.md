@@ -2,8 +2,8 @@
   This project is a full-stack web application made with Django Framework, which allow the register, listing and information specifying of books together with a user registration-login system
 
 ## Features
-  - **Registration and Login of Users:** It is possible to create a profile
-  - **Registration of books:** Each logged user can add a book with its name,author, year and publisher
+  - **Registration and Login of Users:** It is possible to create a profile and have special perms with it (such as adding new books, synopses, opinions and adding pic to books without it)
+  - **Registration of books:** Each logged user can add a book with its pic, name, author, year and publisher
   - **Listing page:** The previously added books can be seen on the initial page
   - **creation of synopses and their visualization alongside other users:** Each user can create and see synopses created by others in a details page
   - **creation of opinions ant their visualization alongside other users:** Each user can create and see opinions about selected books created by others in a details page
