@@ -10,7 +10,7 @@ class Livro(models.Model):
     ano_publicacao = models.IntegerField()
     editora = models.CharField(max_length=100)
     criado_em = models.DateTimeField(auto_now_add=True)
-    slug=models.SlugField( blank=True, null=True, unique=True)
+    slug=models.SlugField( blank=True, null=True, unique=True, max_length=200)
     imagem=models.ImageField(upload_to='livros/',null=True, blank=True)
 
     def save(self, *args, **kwargs):

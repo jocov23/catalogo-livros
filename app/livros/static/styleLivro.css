@@ -125,7 +125,7 @@
     border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.2s ease, transform 0.2s ease;
-    
+    color: #000000;
 
     
     
@@ -274,6 +274,9 @@ thead{
         
         
     }
+    li{
+        font-size: 17px;
+    }
     
     .dados{
         background: linear-gradient(135deg, #1c2340, #0f1530);
@@ -388,6 +391,8 @@ thead{
     button:hover{
         background-color: darkblue;
     }
+
+
     
 }
 .imagem a{
@@ -426,7 +431,7 @@ thead{
         padding-top: 150px;
         font-size: 70px;
         padding-left: 10px;
-        color: #00ff59;
+        color:  #cbee04;
     }
     h2, h3, h4, h5{
         text-align: left;
@@ -438,7 +443,7 @@ thead{
     h2:hover, h3:hover, h4:hover, h5:hover{
         text-align: left;
         padding-top: 20px;
-        color: #0adf55;
+        color: #c6e849;
         
     }
 }
