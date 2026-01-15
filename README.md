@@ -12,6 +12,8 @@
   <img src="https://github.com/user-attachments/assets/48f8cd44-4100-4622-8c37-21d529e54808" width="600px" />
 <div>
   <br>
+
+  
 ## Technologies
   - **Frontend:**
       - HTML5
@@ -40,11 +42,16 @@
     docker-compose up --build -d
   ```
 4. **Open your browser to http://localhost:8000 to view the project.**
+   ```
+    If any problem or doubt arise check guide.txt file!
+   ```
 
 ## Contact
   - **E-mail:** jocov2309@gmail.com
 
   - **LinkedIn:** https://www.linkedin.com/in/joao-vitor-de-freitas-barbosa/
+
+  - **Discord:** jocov23
 ---
 
 Feel free to fork, star or contribute.
