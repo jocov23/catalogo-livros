@@ -8,6 +8,9 @@
   - **creation of synopses and their visualization alongside other users:** Each user can create and see synopses created by others in a details page
   - **creation of opinions ant their visualization alongside other users:** Each user can create and see opinions about selected books created by others in a details page
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/48f8cd44-4100-4622-8c37-21d529e54808">
+<div>
 ## Technologies
   - **Frontend:**
       - HTML5
