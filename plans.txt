@@ -27,5 +27,6 @@
 24. add favicon to all pages (finished)
 25.revamp site colors
 25.revamp html/css code
-    25.1:add grouping tags
-    25.2:clear unused <divs>
+    25.1.add grouping tags
+    25.2.clear unused <divs>
+    25.3.fix css sintax
